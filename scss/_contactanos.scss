@@ -1,0 +1,111 @@
+// MAPS
+$coloresBasement:(yellowB:#F8FF00,
+    greenB: #489E4B);
+
+$yBase: map-get($coloresBasement, yellowB);
+$gBase: map-get($coloresBasement, greenB);
+
+
+.contact-container {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 40px repeat(4, 200px);
+}
+
+.contactsec {
+    grid-column: 1 / 4;
+    grid-row: 3 / 6;
+    background-color: $gBase;
+    border: 2px $yBase solid;
+    margin: 100px 50px 0px 50px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .contactsec__contactform {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .formm {
+            width: 100%;
+        }
+    }
+
+}
+
+.consultas {
+    grid-column: 1 / 4;
+    grid-row: 8 / auto;
+    background-color: $gBase;
+    margin: 20px;
+    border: 2px $yBase solid;
+
+    .consultas__uno {
+        border: 2px $yBase solid;
+    }
+
+    .consultas__dos {
+        border: 2px $yBase solid;
+    }
+
+    .consultas__tres {
+        border: 2px $yBase solid;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .contact-container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 130px 40px repeat(4, 200px);
+    }
+
+
+    .contactsec {
+        grid-column: 2 / 6;
+        grid-row: 3 / 8;
+        margin: 100px 50px 150px 50px;
+
+        .contactsec__contactform {
+            .formm {
+                width: auto;
+            }
+        }
+
+        .contactsec__contactform input:focus {
+            background-color: black;
+            color: #F8FF00;
+        }
+
+        .contactsec__contactform textarea:focus {
+            background-color: black;
+            color: #F8FF00;
+        }
+    }
+
+    .consultas {
+        grid-column: 1 / 7;
+        grid-row: 8 / auto;
+        background-color: $gBase;
+        margin: 20px;
+        border: 2px $yBase solid;
+
+        .consultas__uno {
+            border: 2px $yBase solid;
+        }
+
+        .consultas__dos {
+            border: 2px $yBase solid;
+        }
+
+        .consultas__tres {
+            border: 2px $yBase solid;
+        }
+    }
+
+}
